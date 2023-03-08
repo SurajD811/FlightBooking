@@ -3,6 +3,8 @@ package pagepackage;
 
 
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -12,9 +14,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import genrics.BaseTest;
 import genrics.WebDriverCommonLib;
 
-public class Flight_Booking  {
+public class Flight_Booking extends BaseTest {
 	
 	@FindBy(xpath="//span[text()=' Flights ']")private WebElement Flights;
 	@FindBy(id="ControlGroupSearchView_AvailabilitySearchInputSearchView_RoundTrip")private WebElement Round_Trip;
@@ -111,13 +114,13 @@ public class Flight_Booking  {
 
 
 
-	@Test
+
 	public void book_Spicejet_com() throws InterruptedException {
-		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		WebDriverCommonLib wd=new WebDriverCommonLib();
-		
 		Flights.click();
 		Round_Trip.click();
+		wd.javaScript(0, 100);
 		DepartureCity.click();
 		City1.click();
 		ArrivalCity.click();
@@ -129,7 +132,7 @@ public class Flight_Booking  {
 		Passenger.click();
 		wd.selectTheOptionOfDropdown(Adult_DropDown, 2);
 		Thread.sleep(2000);
-		wd.selectTheOptionOfDropdown(Child_DropDown, 1);
+		wd.selectTheOptionOfDropdown(Child_DropDown, 2);
 		Search.click();
 		
 		Assert.assertEquals(DEPARTURE_FLIGHT.isDisplayed(), true);

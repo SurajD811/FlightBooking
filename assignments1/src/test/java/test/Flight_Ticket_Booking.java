@@ -13,6 +13,5 @@ public class Flight_Ticket_Booking extends BaseTest{
 		fb.book_Spicejet_com();
 	}
 	
-	
 
 }

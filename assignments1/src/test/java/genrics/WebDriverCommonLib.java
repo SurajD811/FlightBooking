@@ -1,5 +1,6 @@
 package genrics;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
@@ -11,5 +12,10 @@ public class WebDriverCommonLib extends BaseTest{
 		sel.selectByIndex(index);
 		
 	}
+	public void javaScript(int X, int Y) {
+		JavascriptExecutor js= (JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy("+X+","+Y+")");
+	}
+
 
 }
