@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-08T21:04:55 IST" name="Default suite" finished-at="2023-03-08T21:05:34 IST" duration-ms="38666">
+  <suite started-at="2023-03-09T08:45:18 IST" name="Default suite" finished-at="2023-03-09T08:46:27 IST" duration-ms="68754">
     <groups>
     </groups>
-    <test started-at="2023-03-08T21:04:55 IST" name="Default test" finished-at="2023-03-08T21:05:34 IST" duration-ms="38666">
+    <test started-at="2023-03-09T08:45:18 IST" name="Default test" finished-at="2023-03-09T08:46:27 IST" duration-ms="68754">
       <class name="test.Flight_Ticket_Booking">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.Flight_Ticket_Booking@47af7f3d]" started-at="2023-03-08T21:04:55 IST" name="setUp" finished-at="2023-03-08T21:05:13 IST" duration-ms="18241" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.Flight_Ticket_Booking@47af7f3d]" started-at="2023-03-09T08:45:18 IST" name="setUp" finished-at="2023-03-09T08:45:58 IST" duration-ms="39391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="bookFligtTicket()[pri:0, instance:test.Flight_Ticket_Booking@47af7f3d]" started-at="2023-03-08T21:05:13 IST" name="bookFligtTicket" finished-at="2023-03-08T21:05:30 IST" duration-ms="16352" status="PASS">
+        <test-method signature="bookFligtTicket()[pri:0, instance:test.Flight_Ticket_Booking@47af7f3d]" started-at="2023-03-09T08:45:58 IST" name="bookFligtTicket" finished-at="2023-03-09T08:46:25 IST" duration-ms="27204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookFligtTicket -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.Flight_Ticket_Booking@47af7f3d]" started-at="2023-03-08T21:05:30 IST" name="tearDown" finished-at="2023-03-08T21:05:34 IST" duration-ms="3983" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.Flight_Ticket_Booking@47af7f3d]" started-at="2023-03-09T08:46:25 IST" name="tearDown" finished-at="2023-03-09T08:46:27 IST" duration-ms="2088" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
