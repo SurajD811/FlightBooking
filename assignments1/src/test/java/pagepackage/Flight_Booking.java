@@ -38,6 +38,10 @@ public class Flight_Booking extends BaseTest {
 	@FindBy(id="ControlGroupSearchView_AvailabilitySearchInputSearchView_DropDownListPassengerType_CHD") WebElement Child_DropDown;
 	@FindBy(id="ControlGroupSearchView_AvailabilitySearchInputSearchView_ButtonSubmit") WebElement Search;
 	@FindBy(xpath="//table[@id='availabilityTable0']/descendant::span[@class='bound-city uppercase']")WebElement DEPARTURE_FLIGHT;
+	@FindBy(xpath="//span[text()=' Mumbai  to  Delhi ']")WebElement Mumbai_To_Delhi;
+	@FindBy(id="spanpaxinfo")WebElement PassengerCount;
+	@FindBy(xpath="//span[text()='28 Mar, Tue']")WebElement DepartureDate;
+	@FindBy(xpath="//span[text()='30 Mar, Thu']")WebElement ReturnDate;
 
 
 
@@ -109,9 +113,39 @@ public class Flight_Booking extends BaseTest {
 		
 		Search.click();
 		
-		String title = driver.getTitle();
-
 		//Verification Part	
+		String title = driver.getTitle();
+		
+		if (Mumbai_To_Delhi.isDisplayed()) {
+			
+			System.out.println("Departure from Mumbai and Destination is Delhi");
+		}
+		else {
+			System.out.println("Wrong Destination or Departure city selected ");
+			Assert.assertTrue(false);
+		}
+		
+		
+
+		if(PassengerCount.isDisplayed()) {
+			
+			System.out.println("3 Adults and 2 Childs are selected");
+		}
+		else {
+			System.out.println("Wrong passenger count is selected");
+			Assert.assertTrue(false);
+		}
+		
+		
+		
+	   if (DepartureDate.isDisplayed()& ReturnDate.isDisplayed()) {
+		   System.out.println("Departure 28th march and Return 30th March is selected");
+	    }
+	   else {
+		   System.out.println("Wrong Dates are selected");
+		   Assert.assertTrue(false);
+	   }
+		
 		Assert.assertEquals(title.contains("Cheap Air Tickets Online, International Flights to India, Cheap International Flight Deals | SpiceJet Airlines"), true);
 		Assert.assertEquals(DEPARTURE_FLIGHT.isDisplayed(), true);
 
